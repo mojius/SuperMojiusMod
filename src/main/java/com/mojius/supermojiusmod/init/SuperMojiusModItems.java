@@ -14,9 +14,7 @@ public class SuperMojiusModItems {
         Identifier itemID = Identifier.of(SuperMojiusMod.MOD_ID, id);
 
         // Register the item.
-        Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
-
-        return registeredItem;
+        return Registry.register(Registries.ITEM, itemID, item);
 
     }
 
@@ -26,7 +24,7 @@ public class SuperMojiusModItems {
                 "suspicious_substance"
     );
 
-    public static void initialize(){
+    public static void init(){
         // Get the event for modifying entries in the ingredients group.
         // And register an event handler that adds our suspicious item to the ingredients group.
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
